@@ -1,7 +1,5 @@
 "use strict";
 
-console.log("holisss"); //bien enlazadado
-
 //constantes.
 const secNumber = document.querySelector(".js-section-number");
 const btn = document.querySelector(".js-section-btn");
@@ -18,9 +16,9 @@ console.log(randomNumber);
 
 function pcRandomNumber() {
   let playerNumber = secNumber.value;
-  if (playerNumber > 1 || playerNumber > 100 ) {
-    clueNumber.innerHTML =  'El número debe estar entre 1 y 100'
-}else if (randomNumber > playerNumber) {
+  if (playerNumber < 1 || playerNumber > 100) {
+    clueNumber.innerHTML = 'El número debe estar entre 1 y 100'
+  }else if (randomNumber > playerNumber) {
     clueNumber.innerHTML = "Demasiado bajo";
   } else if (randomNumber < playerNumber) {
     clueNumber.innerHTML = "Demasiado alto";
