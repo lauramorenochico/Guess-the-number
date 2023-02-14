@@ -18,7 +18,7 @@ console.log(randomNumber);
 
 function pcRandomNumber() {
   let playerNumber = secNumber.value;
-  if (playerNumber > 1 || userNumber > 100 ) {
+  if (playerNumber > 1 || playerNumber > 100 ) {
     clueNumber.innerHTML =  'El número debe estar entre 1 y 100'
 }else if (randomNumber > playerNumber) {
     clueNumber.innerHTML = "Demasiado bajo";
