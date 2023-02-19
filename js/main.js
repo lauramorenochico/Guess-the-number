@@ -2,7 +2,8 @@
 
 //constantes.
 const secNumber = document.querySelector(".js-section-number");
-const btn = document.querySelector(".js-section-btn");
+const btn = document.querySelector(".js-section-play");
+const btnReset = document.querySelector(".js-section-reset");
 const clueNumber = document.querySelector(".js-clue");
 const counter = document.querySelector(".js-counter");
 let counterMoves = 0; //se deja fuera porque no queremos que se ejecute cada vez que hacemos click
@@ -26,7 +27,11 @@ console.log(randomNumber);
 
 function pcRandomNumber() {
   let playerNumber = parseInt (secNumber.value);
-  if (playerNumber < 1 || playerNumber > 100) {
+ 
+  if (isNaN (playerNumber)) {
+  showMessage ('Debe introducir un número')
+  }
+  else if (playerNumber < 1 || playerNumber > 100) {
     showMessage ('El número debe estar entre 1 y 100')
   }else if (randomNumber > playerNumber) {
     showMessage ("Demasiado bajo");
@@ -51,8 +56,13 @@ function handleClick(e) {
   countMoves();
 }
 
+function handleClickButtonReset(e) {
+    e.preventDefault();
+   
+}
+
 //evento del botón.
-btn.addEventListener("click", handleClick);
+btn.addEventListener('click', handleClick);
 
 
 

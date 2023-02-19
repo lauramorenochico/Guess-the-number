@@ -6,23 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
     <title>Adivina el número</title>
 </head>
 
 <body>
+    <main class="container"></main>
     <h1 class="title">Adivina el número </h1>
    
     <form action="#" class="form">
-    <label for="usernumber">Introduce aquí tu número</label>
-    <input placeholder="Ej: 10" type="number" id="usernumber" class="section-number js-section-number" required/>
-    <input type="button" class="section-btn js-section-btn" value="Prueba" />
+    <label for="usernumber" class="label">Introduce aquí tu número</label>
+    <input placeholder="Ej: 10" type="text" id="usernumber" class="section-number js-section-number" required/>
+    <div class="section-btn"></div>
+    <input type="button" class="section-btn__start js-section-play" value="Prueba" />
+    <input type="button" class="section-btn__reset js-section-reset" value="Reinicia" />
+    </div>
     </form>
     <section class="section-game">
-        <p class="clue js-clue">Pista: Escribe el número y dale a Prueba</p>
-        <p class="counter js-counter">Número de intentos: 0</p>
+        <p class="p clue js-clue">Pista: Escribe el número y dale a Prueba</p>
+        <p class="p counter js-counter">Número de intentos: 0</p>
     </section>
-
+    </main>
     <script src="./js/main.js"></script>
+   
 </body>
 
 </html>
