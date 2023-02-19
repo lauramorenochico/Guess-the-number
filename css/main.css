@@ -1,9 +1,13 @@
 .title {
-    font-size: 100px;
+    font-size: 80px;
     display:flex;
     justify-content: start;
 }
 
 .section-btn {
 
+}
+
+.section-number {
+    border: solid 2px red;
 }

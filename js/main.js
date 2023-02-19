@@ -10,6 +10,14 @@ const randomNumber = getRandomNumber(100); //se deja fuera porque no queremos qu
 
 // cuando hacemos click en botón , se genera un número aleatorio que compararemos con el dado por la jugadora
 
+//function removeStartMessageClass () => {secNumber.classList.remove('warningMessage')}
+
+
+//agrupar todos los innerHTML para usar la función creada y no repetir sentencias.
+function showMessage (message) {
+  clueNumber.innerHTML = message
+}
+
 function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
 }
@@ -17,15 +25,15 @@ function getRandomNumber(max) {
 console.log(randomNumber);
 
 function pcRandomNumber() {
-  let playerNumber = secNumber.value;
+  let playerNumber = parseInt (secNumber.value);
   if (playerNumber < 1 || playerNumber > 100) {
-    clueNumber.innerHTML = 'El número debe estar entre 1 y 100'
+    showMessage ('El número debe estar entre 1 y 100')
   }else if (randomNumber > playerNumber) {
-    clueNumber.innerHTML = "Demasiado bajo";
+    showMessage ("Demasiado bajo");
   } else if (randomNumber < playerNumber) {
-    clueNumber.innerHTML = "Demasiado alto";
+    showMessage ("Demasiado alto");
   } else {
-    clueNumber.innerHTML = "¡Has ganado campeona!";
+    showMessage ("¡Has ganado campeona!");
   }
 }
 
