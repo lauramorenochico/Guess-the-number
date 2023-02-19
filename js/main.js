@@ -47,6 +47,7 @@ function pcRandomNumber() {
 function countMoves() {
   const totalMoves = counterMoves++;
   counter.innerHTML = `Número de intentos: ${totalMoves}`;
+
 }
 
 //función principal
@@ -56,13 +57,13 @@ function handleClick(e) {
   countMoves();
 }
 
-function handleClickButtonReset(e) {
+function handleClickReset(e) {
     e.preventDefault();
-   
+   location.reload();
 }
 
 //evento del botón.
 btn.addEventListener('click', handleClick);
-
+btnReset.addEventListener('click', handleClickReset);
 
 
