@@ -5,7 +5,7 @@
     padding: 0px;
 }
 .body{
-    background-image: url(../images/59.jpg);
+    background-image: url("../images/fondo.jpg");
         display: flex;
         align-items: center;
         justify-content: center;
